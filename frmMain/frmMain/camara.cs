@@ -53,7 +53,7 @@ namespace frmMain
 
         public void stop(int Indice)
         {
-
+            capture[Indice].Stop();
         }
 
     }
