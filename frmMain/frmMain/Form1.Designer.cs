@@ -31,7 +31,10 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.imgBox1 = new Emgu.CV.UI.ImageBox();
+            this.imgBox2 = new Emgu.CV.UI.ImageBox();
+            this.btnConnect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // imgBox1
@@ -42,13 +45,33 @@
             this.imgBox1.TabIndex = 2;
             this.imgBox1.TabStop = false;
             // 
+            // imgBox2
+            // 
+            this.imgBox2.Location = new System.Drawing.Point(493, 12);
+            this.imgBox2.Name = "imgBox2";
+            this.imgBox2.Size = new System.Drawing.Size(463, 407);
+            this.imgBox2.TabIndex = 3;
+            this.imgBox2.TabStop = false;
+            // 
+            // btnConnect
+            // 
+            this.btnConnect.Location = new System.Drawing.Point(44, 467);
+            this.btnConnect.Name = "btnConnect";
+            this.btnConnect.Size = new System.Drawing.Size(75, 23);
+            this.btnConnect.TabIndex = 4;
+            this.btnConnect.Text = "Conectar";
+            this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(1302, 617);
+            this.ClientSize = new System.Drawing.Size(979, 617);
+            this.Controls.Add(this.btnConnect);
+            this.Controls.Add(this.imgBox2);
             this.Controls.Add(this.imgBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
@@ -56,6 +79,7 @@
             this.Text = "Artificial Vision";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -63,6 +87,8 @@
         #endregion
 
         private Emgu.CV.UI.ImageBox imgBox1;
+        private Emgu.CV.UI.ImageBox imgBox2;
+        private System.Windows.Forms.Button btnConnect;
     }
 }
 

@@ -11,8 +11,9 @@ namespace frmMain
 {
     class camara
     {
-        private VideoCapture[] capture;
+        private VideoCapture capture;
         private Mat Frame;
+        private int Indice1 = 0;
         public camara()
         {
 
@@ -20,29 +21,34 @@ namespace frmMain
 
         public void Inicializar(int Indice,ImageBox imgBox)
         {
-            capture[Indice] = new VideoCapture(Indice);
-            capture[Indice].ImageGrabbed += CapturarImagen(imgBox,Indice);
+            Indice1 = Indice;
+            capture = new VideoCapture(Indice);
+            capture.ImageGrabbed += CapturarImagen;
             Frame = new Mat();
 
         }
 
-        private EventHandler CapturarImagen(ImageBox imgBox, int Indice)
+        private void CapturarImagen(object sender, EventArgs e,)
         {
-            if (capture != null && capture[Indice].Ptr != IntPtr.Zero)
+            if (capture != null && capture.Ptr != IntPtr.Zero)
             {
-                capture[Indice].Retrieve(Frame, 0);
+                capture.Retrieve(Frame, Indice1);
                 imgBox.Image = Frame;
             }
-            throw new NotImplementedException();
+            
+        }
+        private void colocarImg(int Indice, ImageBox imgBox)
+        {
+
         }
 
-        public void start(int Indice)
+        public void start()
         {
-            if (capture[Indice] != null)
+            if (capture != null)
             {
                 try
                 {
-                    capture[Indice].Start();
+                    capture.Start();
                 }
                 catch (Exception ex)
                 {
@@ -51,9 +57,9 @@ namespace frmMain
             }
         }
 
-        public void stop(int Indice)
+        public void stop()
         {
-            capture[Indice].Stop();
+            capture.Stop();
         }
 
     }
