@@ -15,6 +15,7 @@ namespace frmMain
     {
         camara ca1 = new camara();
         camara ca2 = new camara();
+
         public frmMain()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace frmMain
         private void frmMain_Load(object sender, EventArgs e)
         {
             ca1.Inicializar(1,imgBox1);
-            ca2.Inicializar(0, imgBox2);
+            ca2.Inicializar(2, imgBox2);
         }
 
         private void btnConnect_Click(object sender, EventArgs e)

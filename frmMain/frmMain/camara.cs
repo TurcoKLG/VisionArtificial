@@ -13,6 +13,7 @@ namespace frmMain
     {
         private VideoCapture capture;
         private Mat Frame;
+        ImageBox imgBox1;
         private int Indice1 = 0;
         public camara()
         {
@@ -22,18 +23,19 @@ namespace frmMain
         public void Inicializar(int Indice,ImageBox imgBox)
         {
             Indice1 = Indice;
+            imgBox1 = imgBox;
             capture = new VideoCapture(Indice);
             capture.ImageGrabbed += CapturarImagen;
             Frame = new Mat();
 
         }
 
-        private void CapturarImagen(object sender, EventArgs e,)
+        private void CapturarImagen(object sender, EventArgs e)
         {
             if (capture != null && capture.Ptr != IntPtr.Zero)
             {
                 capture.Retrieve(Frame, Indice1);
-                imgBox.Image = Frame;
+                imgBox1.Image = Frame;
             }
             
         }
