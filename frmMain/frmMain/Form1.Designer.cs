@@ -39,23 +39,26 @@
             // 
             // imgBox1
             // 
+            this.imgBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("imgBox1.InitialImage")));
             this.imgBox1.Location = new System.Drawing.Point(12, 12);
             this.imgBox1.Name = "imgBox1";
-            this.imgBox1.Size = new System.Drawing.Size(463, 407);
+            this.imgBox1.Size = new System.Drawing.Size(500, 500);
             this.imgBox1.TabIndex = 2;
             this.imgBox1.TabStop = false;
             // 
             // imgBox2
             // 
-            this.imgBox2.Location = new System.Drawing.Point(493, 12);
+            this.imgBox2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.imgBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("imgBox2.InitialImage")));
+            this.imgBox2.Location = new System.Drawing.Point(532, 12);
             this.imgBox2.Name = "imgBox2";
-            this.imgBox2.Size = new System.Drawing.Size(463, 407);
+            this.imgBox2.Size = new System.Drawing.Size(500, 500);
             this.imgBox2.TabIndex = 3;
             this.imgBox2.TabStop = false;
             // 
             // btnConnect
             // 
-            this.btnConnect.Location = new System.Drawing.Point(44, 467);
+            this.btnConnect.Location = new System.Drawing.Point(12, 531);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(75, 23);
             this.btnConnect.TabIndex = 4;
@@ -69,7 +72,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(979, 617);
+            this.ClientSize = new System.Drawing.Size(1062, 568);
             this.Controls.Add(this.btnConnect);
             this.Controls.Add(this.imgBox2);
             this.Controls.Add(this.imgBox1);
