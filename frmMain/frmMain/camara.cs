@@ -22,6 +22,7 @@ namespace frmMain
 
         public void Inicializar(int Indice,ImageBox imgBox)
         {
+         
             Indice1 = Indice;
             imgBox1 = imgBox;
             capture = new VideoCapture(Indice);
@@ -38,10 +39,6 @@ namespace frmMain
                 imgBox1.Image = Frame;
             }
             
-        }
-        private void colocarImg(int Indice, ImageBox imgBox)
-        {
-
         }
 
         public void start()

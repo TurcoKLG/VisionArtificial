@@ -23,8 +23,8 @@ namespace frmMain
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-            ca1.Inicializar(1,imgBox1);
-            ca2.Inicializar(2, imgBox2);
+            ca1.Inicializar(0,imgBox1);
+            ca2.Inicializar(1, imgBox2);
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
